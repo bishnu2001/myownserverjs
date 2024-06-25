@@ -1,15 +1,16 @@
 
 // import { config } from "dotenv";
-import { config } from "dotenv";
+// import { config } from "dotenv";
+const {config}=require("dotenv")
 config();
 // import "dotenv/config";
 
 
-export const configs = {
+const configs = {
   PORT: process.env.PORT,
   API_VERSION: `api/v1`,
-//   HOST: `${process.env.HOST}`,
-//   DB: process.env.DB,
+  HOST: `${process.env.HOST}`,
+  DB: process.env.DB,
 //   EMAIL_HOST: process.env.EMAIL_HOST,
 //   EMAIL_USER: process.env.EMAIL_USER,
 //   EMAIL_PASS: process.env.EMAIL_PASS,
@@ -23,3 +24,4 @@ export const configs = {
 //   BUCKET_NAME: `${process.env.BUCKET_NAME}`,
 //   CLOUD_FONT: `${process.env.CLOUD_FONT}`,
 };
+module.exports={configs}
